@@ -794,6 +794,19 @@ https://ducanh-tragiang.iwedding.info",
                 </svg>
             </span>
         </div>
+        <audio id="background-music" src="https://cdn.biihappy.com/ziiweb/wedding-musics/BeautifulInWhite-ShaneFilan-524801.mp3" controls loop autoplay></audio>
+
+    <script>
+        // Kiểm tra nếu autoplay bị chặn thì phát lại sau khi người dùng tương tác
+        document.addEventListener('click', function () {
+            var audio = document.getElementById('background-music');
+            if (audio.paused) {
+                audio.play().catch(function(e){
+                    console.log("Autoplay bị chặn: " + e);
+                });
+            }
+        });
+    </script>
     </div>
 
     <!-- Javascript -->
@@ -863,15 +876,12 @@ https://ducanh-tragiang.iwedding.info",
 	  .bii-footer .show-mobile{display: inline-block;}
 	}
 	</style>
-	<div class="bii-footer" style="z-index:9999;background-color: #000;border-top: 1px solid #df4759;color: #fff;text-align: center;letter-spacing: 1px;bottom: 0;width: 100%;font-size: 15px;" bis_skin_checked="1">
+	<div class="bii-footer" style="z-index:9999;background-color: #d6cdcd;border-top: 1px solid #df4759;color: #fff;text-align: center;letter-spacing: 1px;bottom: 0;width: 100%;font-size: 15px;" bis_skin_checked="1">
 		<div class="container" bis_skin_checked="1">
 			<a style="color: #fff;padding: 10px 0 13px;display: flex;align-items: center;justify-content: center;" href="https://www.facebook.com/buiducdung.vn12" target="_blank" bis_skin_checked="1">
-				<img width="30" src="https://static.vecteezy.com/system/resources/previews/018/930/698/non_2x/facebook-logo-facebook-icon-transparent-free-png.png" style="border: 1px solid #fff;border-radius: 50%;width:30px!important;margin-right:5px;">
-				<span class="show-desktop" style="margin-left: 5px;">Trang Web được tạo bởi Bùi Đức Dũng </span><span class="show-mobile">Trang Web được tạo bởi Bùi Đức Dũng</span>
+				<img width="70" src="https://static.vecteezy.com/system/resources/previews/018/930/698/non_2x/facebook-logo-facebook-icon-transparent-free-png.png" style="border: 1px solid #fff;border-radius: 50%;width:70px!important;margin-right:5px;">
+				<span class="show-desktop" style="margin-left: 5px;"><h1 class="show-desktop">Trang Web được tạo bởi Bùi Đức Dũng </h1> </span><span class="show-mobile"><h1 class="show-mobile">Trang Web được tạo bởi Bùi Đức Dũng </h1></span>
 				<span style="line-height: 15px;vertical-align: middle;">
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-					  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
-					</svg>
 				</span>
 			</a>
 		</div>
@@ -899,17 +909,5 @@ https://ducanh-tragiang.iwedding.info",
 
 
 
-<audio id="background-music" src="https://cdn.biihappy.com/ziiweb/wedding-musics/BeautifulInWhite-ShaneFilan-524801.mp3" controls loop autoplay></audio>
 
-    <script>
-        // Kiểm tra nếu autoplay bị chặn thì phát lại sau khi người dùng tương tác
-        document.addEventListener('click', function () {
-            var audio = document.getElementById('background-music');
-            if (audio.paused) {
-                audio.play().catch(function(e){
-                    console.log("Autoplay bị chặn: " + e);
-                });
-            }
-        });
-    </script>
 </body>
