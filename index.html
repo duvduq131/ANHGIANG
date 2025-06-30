@@ -894,23 +894,24 @@ https://ducanh-tragiang.iwedding.info",
         setInterval(createHeart, 500);
     </script>
 
-<div style="text-align:center; margin-top:20px;">
-  <p>Số lượt truy cập trang này: <span id="visit-count">0</span></p>
+
+  <?php
+  $filename = "counter.txt";
+
+  // Mở file và đọc giá trị hiện tại
+  $fp = fopen($filename, "r+");
+  $counter = fgets($fp, 10);
+  $counter = (int)$counter + 1;
+
+  // Ghi giá trị mới vào file
+  fseek($fp, 0);
+  fputs($fp, $counter);
+  fclose($fp);
+?>
+
+<div style="text-align:center; margin:20px; font-weight:bold;">
+  Số lượt truy cập: <?php echo $counter; ?>
 </div>
-
-<script>
-  // Lấy count từ localStorage
-  let count = localStorage.getItem('visitCount');
-  if (count === null) {
-    count = 1;
-  } else {
-    count = parseInt(count) + 1;
-  }
-  localStorage.setItem('visitCount', count);
-
-  // Hiển thị
-  document.getElementById('visit-count').innerText = count;
-</script>
 
 
 </body>
