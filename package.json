@@ -2,7 +2,7 @@
   "name": "wedding-invitation",
   "version": "1.0.0",
   "description": "Wedding invitation website",
-  "main": "index.php",
+  "main": "index.html",
   "scripts": {
     "start": "npx serve .",
     "build": "echo 'Static site - no build needed'",
