@@ -896,7 +896,7 @@ https://ducanh-tragiang.iwedding.info",
 
 
   <?php
-  $filename = "counter.txt";
+  $filename = "couter.txt";
 
   // Mở file và đọc giá trị hiện tại
   $fp = fopen($filename, "r+");
