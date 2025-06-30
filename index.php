@@ -895,23 +895,23 @@ https://ducanh-tragiang.iwedding.info",
     </script>
 
 
+
+
+
   <?php
-  $filename = "couter.txt";
+    $filename = "couter.txt";
+    $fp = fopen($filename, "r+");
+    $counter = fgets($fp, 10);
+    $counter = (int)$counter + 1;
+    fseek($fp, 0);
+    fputs($fp, $counter);
+    fclose($fp);
+  ?>
 
-  // Mở file và đọc giá trị hiện tại
-  $fp = fopen($filename, "r+");
-  $counter = fgets($fp, 10);
-  $counter = (int)$counter + 1;
+  <div style="text-align:center; margin:20px; font-weight:bold;">
+    Số lượt truy cập: <?php echo $counter; ?>
+  </div>
 
-  // Ghi giá trị mới vào file
-  fseek($fp, 0);
-  fputs($fp, $counter);
-  fclose($fp);
-?>
-
-<div style="text-align:center; margin:20px; font-weight:bold;">
-  Số lượt truy cập: <?php echo $counter; ?>
-</div>
 
 
 </body>
